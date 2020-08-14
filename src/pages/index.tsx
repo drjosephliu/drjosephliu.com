@@ -1,8 +1,9 @@
 /** @jsx jsx */
 
 import { graphql } from 'gatsby'
+import Image from 'gatsby-image'
 import { FC } from 'react'
-import { Box, jsx } from 'theme-ui'
+import { Box, Flex, Text, jsx } from 'theme-ui'
 
 import Halo from '../components/halo'
 import Hero from '../components/hero'
@@ -13,12 +14,26 @@ export interface HomeProps {
 }
 
 const Home: FC<HomeProps> = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
       <Halo />
-      <Box sx={{ maxWidth: `55ch` }}>
-        <Hero data={data.allDataYaml.edges[0].node} />
-      </Box>
+      <Flex sx={{ 
+          maxWidth: `75ch`,
+        }}
+      >
+        <Image
+          fixed={data.avatar.childImageSharp.fixed}
+          alt={`Joseph Liu`}
+          sx={{
+            mr: 2,
+            mb: 0,
+            width: '500px',
+            height: '50%'
+          }}
+        />
+          <Hero data={data.allDataYaml.edges[0].node} />
+      </Flex>
     </Layout>
   )
 }
@@ -31,6 +46,14 @@ export const pageQuery = graphql`
       edges {
         node {
           description
+        }
+      }
+    }
+
+    avatar: file(absolutePath: { regex: "/avatar.(jpeg|jpg|gif|png)/" }) {
+      childImageSharp {
+        fixed(width: 500, height: 500) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
