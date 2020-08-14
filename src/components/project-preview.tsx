@@ -33,7 +33,7 @@ const ProjectPreview: FC<ProjectPreview> = ({ name, url, image, summary, tags })
         </Box>
 
         <Box sx={{ pt: 3 }}>
-          <Text as="h1" sx={{ fontSize: 4, 'a:hover > &': { textDecoration: `underline` } }}>
+          <Text as="h1" sx={{ fontSize: 4, ':hover': { textDecoration: `underline` } }}>
             {name}
           </Text>
 

@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Joseph Liu`,
-    description: `Doctor turned Coder`,
+    description: `Doctor turned programmer.`,
   },
   pathPrefix: `/`,
   plugins: [
@@ -47,7 +47,21 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
-      options: { trackingId: `UA-3632655-1` },
+      options: { trackingId: `UA-175501343-1` },
+
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Joseph Liu",
+        short_name: "Joseph Liu",
+        start_url: "/",
+        background_color: "#fff",
+        theme_color: "#c70d3a",
+        display: "standalone",
+        icon: "static/favicon.ico", // This path is relative to the root of the site.
+        crossOrigin: `use-credentials`,
+      },
     },
   ],
 }

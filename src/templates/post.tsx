@@ -24,7 +24,8 @@ export interface Post {
       timeToRead: number 
       tableOfContents: TableOfContents
     }
-  }
+  },
+  location: any
 }
 
 const Post: FC<Post> = ({
