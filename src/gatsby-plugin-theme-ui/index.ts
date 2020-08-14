@@ -49,7 +49,7 @@ export default {
     caps: '0.2em'
   },
   breakpoints: [
-    '320px', '376px', '540px', '735px', '1070px', '1280px', '1440px'
+    '320px', '376px', '540px', '735px', '1070px', '1280px', '1640px', '1880px'
   ],
   // breakpoints: [
   //   ['phone_small', 320],

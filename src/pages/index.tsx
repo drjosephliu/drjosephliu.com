@@ -18,22 +18,9 @@ const Home: FC<HomeProps> = ({ data }) => {
   return (
     <Layout>
       <Halo />
-      <Flex sx={{ 
-          maxWidth: `75ch`,
-        }}
-      >
-        <Image
-          fixed={data.avatar.childImageSharp.fixed}
-          alt={`Joseph Liu`}
-          sx={{
-            mr: 2,
-            mb: 0,
-            width: '500px',
-            height: '50%'
-          }}
-        />
+        <Box sx={{ maxWidth: `55ch` }}>
           <Hero data={data.allDataYaml.edges[0].node} />
-      </Flex>
+        </Box>
     </Layout>
   )
 }
