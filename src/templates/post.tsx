@@ -6,9 +6,9 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Halo from "../components/halo"
 import Intro from "../components/intro"
-import ContentsPanel from "../components/table-of-contents"
+import ContentsPanel from "../components/contents-panel"
 import Tag from "../components/tag"
-import { TableOfContents } from "../components/table-of-contents"
+import { TableOfContents } from "../components/contents-panel"
 
 export interface Post {
   data: {
@@ -51,7 +51,13 @@ const Post: FC<Post> = ({
         description={description}
         hasCodePenEmbed
       />
-      <Box as="article" sx={{ maxWidth: `65ch`, mb: 5, px: 3 }}>
+      <Box as="article" sx={{ 
+        maxWidth: ['45ch', '45ch', '45ch', '55ch', '65ch', '55ch', `62ch`, '65ch'],
+        mb: 5, 
+        px: 3,
+        mx: ['auto', 'auto', 'auto', 'auto', 'auto', '5px', '5px']
+        }}
+      >
         <Intro
           date={date}
           title={title}

@@ -16,9 +16,9 @@ const Home: FC<HomeProps> = ({ data }) => {
   return (
     <Layout>
       <Halo />
-      <Box sx={{ maxWidth: `55ch` }}>
-        <Hero data={data.allDataYaml.edges[0].node} />
-      </Box>
+        <Box sx={{ maxWidth: `55ch` }}>
+          <Hero data={data.allDataYaml.edges[0].node} />
+        </Box>
     </Layout>
   )
 }

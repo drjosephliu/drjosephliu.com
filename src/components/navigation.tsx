@@ -1,6 +1,7 @@
 /** @jsx jsx */
 
-import { Link } from 'gatsby'
+import { Link, useStaticQuery } from 'gatsby'
+import Image from 'gatsby-image'
 import { FC } from 'react'
 import { Box, Flex, Text, jsx } from 'theme-ui'
 
@@ -15,6 +16,7 @@ const links = [
 
 const Navigation: FC = () => {
   const { cycleColorMode } = useCycleColor();
+  const data = useStaticQuery(pageQuery)
 
   return (
     <header>
@@ -35,6 +37,14 @@ const Navigation: FC = () => {
             p: [3, 3, 3, 0]
           }}
         >
+          <Image
+            fixed={data.avatar.childImageSharp.fixed}
+            sx={{
+              borderRadius: 99999,
+              mr: 2,
+              mt: 1
+            }}
+          />
           <Link
             sx={{
               padding: 2,
@@ -131,5 +141,17 @@ const Navigation: FC = () => {
     </header>
   )
 }
+
+export const pageQuery = graphql`
+  query navQuery {
+    avatar: file(absolutePath: { regex: "/avatar.(jpeg|jpg|gif|png|ico)/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
 
 export default Navigation

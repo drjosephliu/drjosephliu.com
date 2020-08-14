@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import { Link } from 'gatsby'
-import { jsx, Text, Box, NavLink } from 'theme-ui'
+import { jsx, Text, Box } from 'theme-ui'
 
 
 export interface TableOfContents {
@@ -15,6 +15,7 @@ export interface ContentsPanel {
 }
 
 const ContentsPanel: FC<ContentsPanel> = ({ tableOfContents, location }) => {
+  console.log(tableOfContents)
   const [listItems] = useState(() => {
     if (!tableOfContents.items) {
       return [];
@@ -58,7 +59,10 @@ const asideStyle = {
 }
 
 const navStyle = {
+  display: ['none', 'none', 'none', 'none', 'none', 'block', 'block'],
   position: 'fixed',
+  top: '20vh',
+  right: ['5vw', '5vw', '5vw', '5vw', '5vw', '5vw', '10vw', '15vw'],
   overflowX: 'hidden',
   overflowY: 'auto',
   width: '16rem',
