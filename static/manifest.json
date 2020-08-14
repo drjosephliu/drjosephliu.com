@@ -1,0 +1,13 @@
+{
+  "name": "Joseph Liu - Doctor turned coder",
+  "short_name": "Joseph Liu",
+  "icons": [
+    {
+      "src": "google-touch-icon.png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#dfeff3",
+  "theme_color": "#dfeff3",
+  "display": "fullscreen"
+}

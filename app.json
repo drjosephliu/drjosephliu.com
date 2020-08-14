@@ -1,0 +1,15 @@
+{
+  "name": "Joseph Liu",
+  "description": "Doctor learns to code.",
+  "keywords": ["gatsby", "static", "ssg"],
+  "repository": "https://github.com/drjosephliu/drjosephliu.com",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+- url: https://github.com/drjosephliu/CheckMyDigitalFootprint
+  name: Check My Digital Footprint
+  summary: Desktop app that scans your gmail inbox and tells you which listservs you've subscribed to.
+  tags: [JavaFX]
+  image: images/digitalFootprint.jpg
+
+- url: https://github.com/drjosephliu/nervetelligence
+  name: Nervetelligence (Hackerthon)
+  summary: An arduino-based hardware device that allows telemedicine doctors to conduct neurological examinations remotely via video stream. PennApps Hackerthon project.
+  tags: [Arduino, Node.js, React]
+  image: images/nervetelligence.jpg
+
+- url: https://github.com/drjosephliu/autoox
+  name: Auto-Ox (Makerthon)
+  summary: Rothberg Catalyzer hardware makerthon project that reads pulse oximetry and prints to web-app via sockets
+  tags: [Arduino, Node.js, React]
+  image: images/autoox.jpg
+
+- url: https://github.com/drjosephliu/Voting-App
+  name: Voting App (FreeCodeCamp)
+  summary: Full stack voting app that allows users to create and vote polls.
+  tags: [Node.js, React, MongoDB]
+  image: images/votingapp.jpg
+
+- url: https://github.com/drjosephliu/d3-map
+  name: Meteor Map (FreeCodeCamp)
+  summary: Interactive map of meteor landings across the globe.
+  tags: [React, D3]
+  image: images/d3meteor.jpg
+
+- url: https://github.com/drjosephliu/d3-force
+  name: Flag Force Graph (FreeCodeCamp)
+  summary: Interactive force graph of flags.
+  tags: [React, D3]
+  image: images/d3force.jpg
+
+- url: https://github.com/drjosephliu/d3-heatmap
+  name: Monthly Global Land Surface Temperature (FreeCodeCamp)
+  summary: Interactive heat map of the globe's monthly land surface temperature.
+  tags: [React, D3]
+  image: images/d3heatmap.jpg
+
+- url: https://github.com/drjosephliu/d3-scatterplot
+  name: Doping In Professional Bicycle Racing (FreeCodeCamp)
+  summary: Interactive scatterplot of professional cyclists with/without doping allegations.
+  tags: [React, D3]
+  image: images/d3scatter.jpg
+
+- url: https://github.com/drjosephliu/d3-barchart
+  name: Annual GDP in the USA (FreeCodeCamp)
+  summary: Interactive bar chart of annual GDP in the USA.
+  tags: [React, D3]
+  image: images/d3bar.jpg
+
+- url: https://github.com/drjosephliu/markdown-previewer
+  name: Markdown Previewer (FreeCodeCamp)
+  summary: Previews markdown code.
+  tags: [React]
+  image: images/markdown.jpg
+
+- url: https://github.com/drjosephliu/react-tictactoe
+  name: Super Simple Tic Tac Toe (FreeCodeCamp)
+  summary: No fluff tic tac toe.
+  tags: [React]
+  image: images/tictactoe.jpg
+
+- url: https://github.com/drjosephliu/react-simon-game
+  name: Simon Game (FreeCodeCamp)
+  summary: The Simon game.
+  tags: [React]
+  image: images/simon.jpg
+
+- url: https://github.com/drjosephliu/react-pomodoro
+  name: Pomodoro Clock (FreeCodeCamp)
+  summary: A pomodoro clock.
+  tags: [React]
+  image: images/pomodoro.jpg
+
+- url: https://github.com/drjosephliu/Calculator-React
+  name: Calculator (FreeCodeCamp)
+  summary: A super simple calculator.
+  tags: [React]
+  image: images/calc.jpg
+
+- url: https://github.com/drjosephliu/twitch-react
+  name: Twitch Streaming Widget (FreeCodeCamp)
+  summary: Twitch streaming web app.
+  tags: [React]
+  image: images/twitch.jpg
+
+- url: https://github.com/drjosephliu/Wiki-React-App
+  name: Wikipedia Widget (FreeCodeCamp)
+  summary: Wikipedia API widget.
+  tags: [React]
+  image: images/wiki.jpg
+
+- url: https://github.com/drjosephliu/Weather-App-React
+  name: Weather App (FreeCodeCamp)
+  summary: Weather app that fetches current weather and location using OpenWeatherMap and Google Maps APIs.
+  tags: [React]
+  image: images/weather.jpg

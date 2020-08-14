@@ -1,0 +1,11 @@
+- url: https://github.com/drjosephliu/diagnosis-bot
+  name: Refer A Medical Specialist
+  summary: Machine learning web app that refers a medical specialist depending on user's symptoms.
+  tags: [react, node.js, mysql, redis]
+  image: images/diagnosisApp.jpg
+
+- url: https://github.com/drjosephliu/diagnosis-chatbot
+  name: Refer A Medical Specialist Chatbot
+  summary: Chatbot version of Refer A Medical Specialist.
+  tags: [Dialogflow]
+  image: images/diagnosisChatbot.jpg
