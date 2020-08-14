@@ -41,7 +41,8 @@ const Post: FC<Post> = ({
       timeToRead,
       tableOfContents
     }
-  }
+  },
+  location
 })  => {
   return (
     <Layout>

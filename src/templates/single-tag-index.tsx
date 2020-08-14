@@ -26,7 +26,6 @@ const SingleTagIndex: FC<SingleTagIndex> = ({ pageContext }) => {
         <Intro title={`${tagName}`} description={`All posts about ${tagName}.`} />
         <Box as="ul" sx={{ my: 0, pl: 0, listStyleType: `none` }}>
           {posts.map((post: any, index: number) => {
-            console.log("POST: ", post)
             return (
               <Box as="li" key={index} sx={{ pt: 4 }}>
                 <ArticlePreview article={post} />

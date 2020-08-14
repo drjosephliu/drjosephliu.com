@@ -15,7 +15,6 @@ export interface ContentsPanel {
 }
 
 const ContentsPanel: FC<ContentsPanel> = ({ tableOfContents, location }) => {
-  console.log(tableOfContents)
   const [listItems] = useState(() => {
     if (!tableOfContents.items) {
       return [];
