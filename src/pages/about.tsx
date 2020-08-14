@@ -27,7 +27,7 @@ const About: FC<AboutProps> = ({
   return (
     <Layout>
       <Halo title="About" url="http://drjosephliu.com/about" />
-      <Box sx={{ maxWidth: `50ch`, mb: 5, px: 3 }}>
+      <Box sx={{ maxWidth: `60ch`, mb: 5, px: 3 }}>
         <Intro
           title="About"
           description="I'm a computer science student at the University of Pennsylvania with a curious mind and a love for learning and building."

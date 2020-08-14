@@ -38,7 +38,14 @@ const ArticlePreview: FC<ArticlePreviewProps> = ({
       sx={{ display: `block`, ':hover': { textDecoration: `none` } }}
     >
       <Link to={`/${slug}`}>
-        <Text as="h2" sx={{ mt: 1, 'a:hover > &': { textDecoration: `underline` } }}>
+        <Text 
+          as="h2" 
+          sx={{ 
+            mt: 1, 
+            'a:hover > &': { textDecoration: `underline` },
+            fontWeight: 800
+          }}
+        >
           {title}
         </Text>
       </Link>

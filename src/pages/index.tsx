@@ -1,26 +1,76 @@
 /** @jsx jsx */
 
-import { graphql } from 'gatsby'
-import Image from 'gatsby-image'
+import { graphql, Link } from 'gatsby'
 import { FC } from 'react'
-import { Box, Flex, Text, jsx } from 'theme-ui'
+import { Box, Divider, Text, jsx } from 'theme-ui'
 
+import Intro from '../components/intro'
 import Halo from '../components/halo'
-import Hero from '../components/hero'
 import Layout from '../components/layout'
+import TimeToRead from '../components/time-to-read'
 
 export interface HomeProps {
   data: any
 }
 
 const Home: FC<HomeProps> = ({ data }) => {
-  console.log(data)
+  const recentPosts = data.allMdx.edges
   return (
     <Layout>
       <Halo />
         <Box sx={{ maxWidth: `55ch` }}>
-          <Hero data={data.allDataYaml.edges[0].node} />
+          <Intro 
+            title="Hi I'm Joe."
+            description="I'm a doctor turned programmer interested in all kinds 
+            of technology. I write about my learning experiences as
+            I transition from the world of medicine to the world of software."
+          />
+          <Link to="/about" sx={{ fontSize: 3 }}>
+            Read more about me
+          </Link>
+          <Divider sx={{ my: 5, color: 'divider' }}/>
+        <Text 
+          as="h3"
+          sx={{
+            fontWeight: 800
+          }}
+        >
+          Recent Posts
+        </Text>
+        <Box 
+          as="ul"
+          sx={{
+            listStyleType: 'none',
+            pl: 0,
+            mt: 4
+          }}
+        >
+          {recentPosts.map(({ node }: any) => {
+            return (
+              <Box as="li" key={node.slug}>
+                <Link to={`/${node.slug}`}>
+                  <Text as="h4" sx={{ fontWeight: 700 }}>{node.frontmatter.title}</Text>
+                </Link>
+                <Text 
+                  as="p" 
+                  sx={{ 
+                    m: `10px 0px`, 
+                    fontSize: 2, 
+                    fontFamily: 'Georgia, serif', 
+                    color: `text`, 
+                    'a:hover > &': { color: `text` } 
+                  }}
+                >
+                  {node.frontmatter.date} • <TimeToRead mins={node.timeToRead} />
+                </Text> 
+                <Text as="p">
+                  {node.frontmatter.description}
+                </Text>
+              </Box>
+            )
+          })}
         </Box>
+      </Box>
     </Layout>
   )
 }
@@ -29,18 +79,16 @@ export default Home
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allDataYaml {
+    allMdx(limit: 3, sort: {fields: frontmatter___date, order: DESC}) {
       edges {
         node {
-          description
-        }
-      }
-    }
-
-    avatar: file(absolutePath: { regex: "/avatar.(jpeg|jpg|gif|png)/" }) {
-      childImageSharp {
-        fixed(width: 500, height: 500) {
-          ...GatsbyImageSharpFixed
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+          timeToRead
+          slug
         }
       }
     }

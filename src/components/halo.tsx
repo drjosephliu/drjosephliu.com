@@ -43,7 +43,7 @@ const Halo: FC<HaloProps> = ({
       <meta name="theme-color" content={colorMode === `dark` ? `#0e1010` : `#dfeff3`} />
       <link rel="icon" href="favicon.svg" />
       <link rel="mask-icon" href="favicon.svg" color="#000000" />
-      <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+      <link rel="apple-touch-icon" href="favicon.svg" />
       <link rel="manifest" href="manifest.json" />
 
       <meta property="og:url" content={url} />

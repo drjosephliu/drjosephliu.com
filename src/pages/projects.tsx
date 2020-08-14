@@ -10,6 +10,7 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Tag from '../components/tag'
 import ContentsPanel from "../components/contents-panel"
+import ProjectPreview from "../components/project-preview"
 
 export interface ProjectsProps {
   data: any
@@ -17,12 +18,15 @@ export interface ProjectsProps {
 }
 
 const Projects: FC<ProjectsProps> = ({ data, location }) => {
-  console.log(location)
   const tableOfContents: any = {
     items: [
       {
         url: "#work",
         title: "Work"
+      },
+      {
+        url: "#class",
+        title: "Class",
       },
       {
         url: "#personal",
@@ -36,11 +40,20 @@ const Projects: FC<ProjectsProps> = ({ data, location }) => {
       <Flex sx={{
           justifyContent: 'space-between',
         }}>
-        <Box sx={{ maxWidth: `50ch`, mb: 5, px: 3 }}>
+        <Box sx={{ maxWidth: `50ch`, mb: 0, px: 3 }}>
           <Intro title="Projects" description="A handful of things I've built." />
-          <Divider />
+          <Divider sx={{ my: 5 }}/>
+          {/* WORK PROJECTS **/}
           <Box as="ul" sx={{ my: 70, pl: 0, display: `grid` }}>
-            <Text as="h2" sx={{ textDecoration: 'underline' }}>Work</Text>
+            <Text 
+              as="h2" 
+              id="work"
+              sx={{ 
+                fontWeight: 700,
+              }}
+            >
+              Work
+            </Text>
             {data.allWorkProjectsYaml.edges.map(
               ({
                 node: { name, url, image, summary, tags },
@@ -57,48 +70,66 @@ const Projects: FC<ProjectsProps> = ({ data, location }) => {
                   tags: string[]
                 }
               }) => (
-                <Box key={name} as="li" sx={{ mt: 4, display: `block` }}>
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ display: `block`, ':hover': { textDecoration: `none` } }}
-                  >
-                    <Box sx={{ bg: `action` }}>
-                      {image && (
-                        <Img
-                          sizes={{ ...image.childImageSharp.fluid, aspectRatio: 16 / 9 }}
-                          imgStyle={{ objectPosition: `center top` }}
-                          alt={name}
-                        />
-                      )}
-                    </Box>
-
-                    <Box sx={{ pt: 3 }}>
-                      <Text as="h1" sx={{ fontSize: 4, 'a:hover > &': { textDecoration: `underline` } }}>
-                        {name}
-                      </Text>
-
-                      <Text
-                        as="p"
-                        sx={{ mt: 1, fontFamily: `Georgia, serif`, color: `text`, 'a:hover > &': { color: `text` } }}
-                      >
-                        {summary}
-                      </Text>
-
-                      <Box sx={{ mt: `2px`, mx: -2, color: `text`, 'a:hover > &': { color: `text` } }}>
-                        {!!tags && !!tags.length && tags.map(tagName => <Tag
-                        key={tagName} tagName={tagName} />)}
-                      </Box>
-                    </Box>
-                  </a>
-                </Box>
+                <ProjectPreview 
+                  name={name} 
+                  url={url} 
+                  summary={summary} 
+                  image={image}
+                  tags={tags}
+                />
               ),
             )}
           </Box>
           <Divider />
+          {/* CLASS PROJECTS **/}
           <Box as="ul" sx={{ my: 70, pl: 0, display: `grid` }}>
-            <Text as="h2" id="personal" sx={{ textDecoration: 'underline' }}>Personal</Text>
+            <Text 
+              as="h2" 
+              id="class" 
+              sx={{ 
+                fontWeight: 700
+              }}
+            >
+              Class
+            </Text>
+            {data.allClassProjectsYaml.edges.map(
+              ({
+                node: { name, url, image, summary, tags },
+              }: {
+                node: {
+                  name: string
+                  url: string
+                  image: {
+                    childImageSharp: {
+                      fluid: any
+                    }
+                  }
+                  summary: string
+                  tags: string[]
+                }
+              }) => (
+                <ProjectPreview 
+                  name={name} 
+                  url={url} 
+                  summary={summary} 
+                  image={image}
+                  tags={tags}
+                />
+              ),
+            )}
+          </Box>
+          <Divider />
+          {/* PERSONAL PROJECTS **/}
+          <Box as="ul" sx={{ my: 70, pl: 0, display: `grid` }}>
+            <Text 
+              as="h2" 
+              id="personal" 
+              sx={{ 
+                fontWeight: 700
+              }}
+            >
+              Personal
+            </Text>
             {data.allPersonalProjectsYaml.edges.map(
               ({
                 node: { name, url, image, summary, tags },
@@ -115,42 +146,13 @@ const Projects: FC<ProjectsProps> = ({ data, location }) => {
                   tags: string[]
                 }
               }) => (
-                <Box key={name} as="li" sx={{ mt: 4, display: `block` }}>
-                  <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={{ display: `block`, ':hover': { textDecoration: `none` } }}
-                  >
-                    <Box sx={{ bg: `action` }}>
-                      {image && (
-                        <Img
-                          sizes={{ ...image.childImageSharp.fluid, aspectRatio: 16 / 9 }}
-                          imgStyle={{ objectPosition: `center top` }}
-                          alt={name}
-                        />
-                      )}
-                    </Box>
-
-                    <Box sx={{ pt: 3 }}>
-                      <Text as="h1" sx={{ fontSize: 4, 'a:hover > &': { textDecoration: `underline` } }}>
-                        {name}
-                      </Text>
-
-                      <Text
-                        as="p"
-                        sx={{ mt: 1, fontFamily: `Georgia, serif`, color: `text`, 'a:hover > &': { color: `text` } }}
-                      >
-                        {summary}
-                      </Text>
-
-                      <Box sx={{ mt: `2px`, mx: -2, color: `text`, 'a:hover > &': { color: `text` } }}>
-                        {!!tags && !!tags.length && tags.map(tagName => <Tag
-                        key={tagName} tagName={tagName} />)}
-                      </Box>
-                    </Box>
-                  </a>
-                </Box>
+                <ProjectPreview 
+                  name={name} 
+                  url={url} 
+                  summary={summary} 
+                  image={image}
+                  tags={tags}
+                />
               ),
             )}
           </Box>
@@ -183,6 +185,23 @@ export const pageQuery = graphql`
       }
     }
     allWorkProjectsYaml {
+      edges {
+        node {
+          url
+          name
+          summary
+          tags
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+    allClassProjectsYaml {
       edges {
         node {
           url

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import { FC } from 'react'
-import { Box, Flex, jsx, Text, useColorMode } from 'theme-ui'
+import { Box, Flex, Divider, jsx, Text } from 'theme-ui'
 
 const links = [
   { href: `https://github.com/drjosephliu`, children: `GitHub` },
@@ -9,16 +9,12 @@ const links = [
 ]
 
 const Footer: FC = () => {
-  const [colorMode] = useColorMode()
 
   return (
-    <Box as="footer" sx={{ pb: 5 }}>
+    <Box as="footer" sx={{ pb: 5, mt: 6 }}>
+      <Divider sx={{ color: 'divider' }} />
       <Flex
         sx={{
-          mt: 4,
-          borderTopWidth: 1,
-          borderTopStyle: `solid`,
-          borderTopColor: `divider`,
           pt: `3.5rem`,
           px: [2, 0],
           flexWrap: `wrap`,

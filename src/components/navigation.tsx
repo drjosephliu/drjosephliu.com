@@ -60,7 +60,16 @@ const Navigation: FC = () => {
             }}
             to="/"
           >
-            <Text as="h1" sx={{ fontFamily: "Avenir Next", fontWeight: 700, stroke: 'text' }}>joseph liu</Text>
+            <Text 
+              as="h2" 
+              sx={{ 
+                fontFamily: "Avenir Next", 
+                fontWeight: 700, 
+                stroke: 'text' 
+              }}
+            >
+              joseph liu
+            </Text>
           </Link>
         </Flex>
         <Flex
@@ -144,9 +153,9 @@ const Navigation: FC = () => {
 
 export const pageQuery = graphql`
   query navQuery {
-    avatar: file(absolutePath: { regex: "/avatar.(jpeg|jpg|gif|png|ico)/" }) {
+    avatar: file(absolutePath: { regex: "/avatar.(jpeg|jpg|gif|png)/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 45, height: 45) {
           ...GatsbyImageSharpFixed
         }
       }

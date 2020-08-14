@@ -22,7 +22,7 @@ const Tag: FC<Tag> = ({ tagName }) => (
         backgroundColor: `tag`,
       }}
     >
-      {tagName}
+      {tagName.toLowerCase()}
     </span>
 )
 

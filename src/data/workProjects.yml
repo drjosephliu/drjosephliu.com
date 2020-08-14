@@ -1,11 +1,34 @@
+- url: https://coinflex.com/markets/
+  name: CoinFLEX V2
+  summary: |
+    Version 2 of CoinFLEX was a complete rebuild of the entire exchange. I was 
+    responsible for many aspects of the frontend trading interface, from building
+    out various components to writing explainer docs and onboarding other interns.
+    I also set up a centralised ELK logging server and optimised the risk engine.
+  tags: [react, java, spring, elk]
+  image: images/coinflex.png
+
+- url: https://medium.com/curai-tech/2019-summer-internships-recap-cd4cd44ed0ea
+  name: Explaining Diagnosis Results with LIME & Grouping Clinical Symptoms using Graph Algorithms
+  summary: |
+    My summer internship at Curai consisted of two projects. The first was to 
+    use LIME to explain results from the diagnosis prediction model. The second
+    was to implement an algorithm that groups similar clinical symptoms that 
+    belong to the same hierachy.
+  tags: [react, python, node.js]
+  image: images/lime.png
+
 - url: https://github.com/drjosephliu/diagnosis-bot
-  name: Refer A Medical Specialist
-  summary: Machine learning web app that refers a medical specialist depending on user's symptoms.
+  name: Refer a Medical Specialist 
+  summary: |
+    At FindDoc, I worked with an ML engineer to build an app that predicts which
+    kind of medical specialist a patient should see based on his/her symptoms. I
+    was responsible for building out the databases, frontend and backends.
   tags: [react, node.js, mysql, redis]
   image: images/diagnosisApp.jpg
 
 - url: https://github.com/drjosephliu/diagnosis-chatbot
-  name: Refer A Medical Specialist Chatbot
+  name: Refer a Medical Specialist Chatbot
   summary: Chatbot version of Refer A Medical Specialist.
   tags: [Dialogflow]
   image: images/diagnosisChatbot.jpg

@@ -15,7 +15,7 @@ export interface IntroProps {
 const Intro: FC<IntroProps> = ({ date, title, description, mins }) => {
   return (
     <Box>
-      <Text as="h1">{title}</Text>
+      <Text as="h1" sx={{ fontFamily: "Avenir Next", fontWeight: 800 }}>{title}</Text>
       {date && <Text as="p" sx={{ m: `10px 0px`, fontSize: 2, fontFamily: 'Georgia, serif', color: `text`, 'a:hover > &': { color: `text` } }}>
         {date} {mins && <span>• <TimeToRead mins={mins} /></span>}
       </Text> }

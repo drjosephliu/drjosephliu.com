@@ -1,9 +1,3 @@
-- url: https://github.com/drjosephliu/CheckMyDigitalFootprint
-  name: Check My Digital Footprint
-  summary: Desktop app that scans your gmail inbox and tells you which listservs you've subscribed to.
-  tags: [JavaFX]
-  image: images/digitalFootprint.jpg
-
 - url: https://github.com/drjosephliu/nervetelligence
   name: Nervetelligence (Hackerthon)
   summary: An arduino-based hardware device that allows telemedicine doctors to conduct neurological examinations remotely via video stream. PennApps Hackerthon project.

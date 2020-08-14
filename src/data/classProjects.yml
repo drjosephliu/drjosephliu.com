@@ -1,0 +1,48 @@
+- url: https://github.com/drjosephliu/author_classification_project
+  name: Author Classification with BERT
+  summary: |
+    Final project for CIS 530 Natural Language Processing. We used the 
+    Reuters_50_50 dataset, which consists of 5000 news articles by the top 50
+    authors, and applied various models to predict author identification. The 
+    best published accuracy was 69.1% by Qian et al (2017) using a GRU-based
+    model. We smashed that with a 92.9% accuracy using an end-to-end embedding
+    and classification model with BERT as a layer in a forward-feed neural 
+    network and bag of words as an additional feature.
+  tags: [Python, scikit-learn, numpy]
+  image: 
+
+- url: https://github.com/drjosephliu/kickstarter_campaign_predictor
+  name: Predicting the Success or Failure of Kickstarter Campaigns
+  summary: |
+    Final project for CIS 520 Machine Learning. We examined over 380,000 
+    kickstarter campaigns spanning a period of 2009 to 2018 and fitted the data 
+    across a variety of models: logistic regression, XGBoost, Adaboost, decision 
+    tree, random forest and neural network. XGBoost performed best with an 
+    accuracy of 70.23% and a recall of 43.64%. 
+  tags: [Python, scikit-learn, numpy]
+  image: 
+
+- url: https://github.com/drjosephliu/webcrawler_project
+  name: Web Crawler & Text Summarizer
+  summary: Final project for CIS 552 Advanced Programming in Haskell. We made a web crawler that crawls news sites and summarises articles using TF-IDF. I built the parser, crawler, logger and wrote QuickCheck tests.
+  tags: [Haskell, QuickCheck]
+  image: 
+
+- url: https://github.com/drjosephliu/CheckMyDigitalFootprint
+  name: Penn OS
+  summary: Final project for CIS 548 Operating Systems where we had to build an operating system complete with shell, filesystem and scheduler. I was repsonsible for the shell.
+  tags: [C]
+  image: 
+
+- url: https://github.com/drjosephliu/music_streaming_project
+  name: Music Streaming Protocol 
+  summary: Final project for CIS 553 Network Systems where we designed our own music streaming protocol called Purrfect Meowsical Protocol (PMP). 
+  tags: [Python]
+  image: 
+
+- url: https://github.com/drjosephliu/CheckMyDigitalFootprint
+  name: Check My Digital Footprint
+  summary: Final project for CIT 591 Intro to Software Development. We made a GUI app that scans your gmail inbox and lists which listservs you are subscribed to. I was responsible for the frontend.
+  tags: [java, javaFX]
+  image: images/digitalFootprint.jpg
+
