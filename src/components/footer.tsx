@@ -7,7 +7,8 @@ import resume from "../data/resume/Joseph_Liu_Resume.pdf"
 const links = [
   { href: `https://github.com/drjosephliu`, children: `GitHub` },
   { href: `https://www.linkedin.com/in/dr-joseph-liu/`, children: `LinkedIn` },
-  { href: resume, children: 'Resume' }
+  { href: resume, children: 'Resume' },
+  { href: 'mailto: drjosephliu@gmail.com', children: `drjosephliu@gmail.com` }
 ]
 
 const Footer: FC = () => {

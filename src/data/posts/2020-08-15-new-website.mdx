@@ -1,0 +1,79 @@
+---
+title: New Website & Writing Goals
+date: 2020-08-15
+tags: [gatsby, writing]
+description: How I built my new website and intend to use it for writing.
+---
+
+After a week of hacking away, version two of my new website is finally up and 
+running. It's built with Gatsby, which is a static site generator based on React,
+and the theme is modified from [Chris Nager's](https://github.com/chrisnager/chrisnager-dot-com).
+
+## First experience using Gatsby
+
+It was my first time using Gatsby and intially it was a toss up between Gatsby and
+Hugo, which is another static site generator based on Go. Ultimately I chose Gatsby
+for two reasons: I know React well and it's supposed to be easy to use. Judging 
+from the rave reviews online, I was really expecting a Wordpress-like 
+experience: pick a theme, do some minimal configuration and boom, you're good 
+to go in a matter of hours. 
+
+Nope. If you're expecting for Gatsby to be a walk in the park because you know 
+React well, then you might be in for a shock. I say that with a slight caveat: 
+if all you want is a blog out of the box, then fine, it really is as easy as 
+downloading and running `gatsby develop`. But the second you want even the 
+slightest bit of customisation, then you're going to have to dig underneath the 
+hood. That means learning GraphQL, figuring out how Gatsby sources and transforms 
+input  files, and fiddling around with `gatsby-node.js`; the hole runs pretty deep and 
+next thing you know you're learning all you need to know to author an entire 
+theme from scratch.
+
+So what I expected to be a day project dragged out longer than expected.
+No big deal. On the flip side, now that I have a good grasp of Gatsby, I can finally
+see why people **do** love it. Writing my posts and project blurbs in markdown and yaml files
+instead of hardcoding it into React components (which was what I was doing 
+for version one) makes life so much easier. Importing images into components is
+a breeze with `gatsby-plugin-sharp` and GraphQL and customising my theme is a
+piece of cake with [theme-ui](https://theme-ui.com/).
+
+## Reflections whilst going through old work
+
+Ever since I went back to school two years ago, it's been a non-stop grind of classes,
+projects and internships, so I hadn't really found the time to update my site in over a
+year. Porting the content over from version one though required cleaning up readmes,
+reviewing code and just making sure the work was somewhat presentable. It was 
+also a good time to really look back and reflect on all the work I've done so far
+since the beginning of my journey into programming. Here's what I found:
+- Going back to school to learn CS was the best decision even though I am self-taught
+  because there's no way I would have been able to do some of the class projects on
+  my own.
+- Having used React in all three of my internships, I can safely say that my first projects 
+  on FreeCodeCamp were actually pretty good! Even if I didn't give them enough
+  credit at the beginning because they were toy projects.
+- Doing the entire frontend sequence for FreeCodeCamp was unnecessary. By the third 
+  or fourth project, I had known enough to work in a job.
+- The goal with going back to school was to learn more than just web development
+  and I definitely achieved that.
+
+## On writing
+
+One of the reasons for rebuilding my site was because the first version had no
+blogging capabilities because everything was hardcoded into React components. I've 
+never been a prolific writer so why the sudden will to blog? For several reasons:
+- I have a theory that people who write well, code well. 
+- Writing aids learning. Every time I've had to write up a report or doc after finishing
+  a project, I was able to gain a deeper understanding of it.
+- To have skin in the game: publishing blog posts for the entire world to see (even
+  if few actually do) forces you to think more clearly about what to say and write.
+- The only way to get better is to do it.
+
+As for what I'll be blogging about - for now it'll mostly just be about programming-related
+stuff. People are usually curious about why I switched from medicine to software
+and in fact, to this day, I still get many PMs on reddit asking for advice based on 
+some comments I made a few years ago, so I'll add some career-related content too.
+The internet's already filled with people telling you how to plan your career and succeed though,
+and not enough about the other equally important things in life like friends, family, 
+relationships and health, so maybe I'll sprinkle a few of those topics from time to time as well.
+Is there anything you'd like me to write about? Please feel free to tell me in an email
+below.
+
