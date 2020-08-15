@@ -2,10 +2,12 @@
 
 import { FC } from 'react'
 import { Box, Flex, Divider, jsx, Text } from 'theme-ui'
+import resume from "../data/resume/Joseph_Liu_Resume.pdf"
 
 const links = [
   { href: `https://github.com/drjosephliu`, children: `GitHub` },
   { href: `https://www.linkedin.com/in/dr-joseph-liu/`, children: `LinkedIn` },
+  { href: resume, children: 'Resume' }
 ]
 
 const Footer: FC = () => {

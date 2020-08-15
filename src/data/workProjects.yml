@@ -3,10 +3,11 @@
   summary: |
     Completely rebuilt the entire exchange now doing $100 million in daily trading
     volume for V2. For the first half I was responsible for many aspects of the 
-    frontend trading interface, from building out various components to writing 
-    explainer docs and onboarding other interns. For the second half, I maintained 
-    the risk engine code and configured all the microservices to send logs to a 
-    centralised ELK logging server via Pulsar.
+    frontend trading interface, from building out various components such as the
+    orderbook, market selector menu, trade positions table and trade ticket, to 
+    writing explainer docs and onboarding other interns. For the second half, I 
+    maintained the risk engine and configured all the microservices to send 
+    logs to a centralised ELK logging server via Pulsar.
   tags: [react, java, spring, elk, pulsar, docker]
   image: images/coinflex.png
 
