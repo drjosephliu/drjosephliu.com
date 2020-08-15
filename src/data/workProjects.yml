@@ -1,11 +1,13 @@
 - url: https://coinflex.com/markets/
   name: CoinFLEX V2
   summary: |
-    Version 2 of CoinFLEX was a complete rebuild of the entire exchange. I was 
-    responsible for many aspects of the frontend trading interface, from building
-    out various components to writing explainer docs and onboarding other interns.
-    I also set up a centralised ELK logging server and optimised the risk engine.
-  tags: [react, java, spring, elk]
+    Completely rebuilt the entire exchange now doing $100 million in daily trading
+    volume for V2. For the first half I was responsible for many aspects of the 
+    frontend trading interface, from building out various components to writing 
+    explainer docs and onboarding other interns. For the second half, I maintained 
+    the risk engine code and configured all the microservices to send logs to a 
+    centralised ELK logging server via Pulsar.
+  tags: [react, java, spring, elk, pulsar, docker]
   image: images/coinflex.png
 
 - url: https://medium.com/curai-tech/2019-summer-internships-recap-cd4cd44ed0ea
