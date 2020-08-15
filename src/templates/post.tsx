@@ -45,6 +45,7 @@ const Post: FC<Post> = ({
   },
   location
 })  => {
+  console.log(slug)
   return (
     <Layout>
       <Halo

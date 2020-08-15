@@ -1,18 +1,6 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-// exports.onCreateNode = ({ node, getNode, actions }) => {
-//   const { createNodeField } = actions
-//   if (node.internal.type === `Mdx`) {
-//     const slug = createFilePath({ node, getNode, basePath: 'posts' })
-//     createNodeField({
-//       node,
-//       name: 'slug',
-//       value: slug,
-//     })
-//   }
-// }
-
 const createTagPages = (createPage, posts) => {
   const allTagsIndexTemplate = path.resolve("src/templates/all-tags-index.tsx")
   const singleTagIndexTemplate =
