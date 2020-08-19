@@ -40,6 +40,10 @@
   tags: [Python]
   image: 
 
+- url: https://github.com/drjosephliu/YelpRestaurantRecommendations
+  name: Yelp Restaurant Recommendations
+  summary: Final project CIT 594 Data Structures where we designed a restaurant recommendation algorithm based on co-reviewers' tastes using modified version of breadth-first search.
+
 - url: https://github.com/drjosephliu/CheckMyDigitalFootprint
   name: Check My Digital Footprint
   summary: Final project for CIT 591 Intro to Software Development. We made a GUI app that scans your gmail inbox and lists which listservs you are subscribed to. I was responsible for the frontend.
