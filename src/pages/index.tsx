@@ -47,7 +47,7 @@ const Home: FC<HomeProps> = ({ data }) => {
         >
           {recentPosts.map(({ node }: any) => {
             return (
-              <Box as="li" key={node.slug}>
+              <Box as="li" key={node.slug} sx={{ mb: 4 }}>
                 <Link to={`/${node.slug}`}>
                   <Text as="h4" sx={{ fontWeight: 700 }}>{node.frontmatter.title}</Text>
                 </Link>

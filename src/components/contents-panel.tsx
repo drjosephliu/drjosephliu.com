@@ -2,6 +2,8 @@ import React, { FC, useState } from 'react';
 import { Link } from 'gatsby'
 import { jsx, Text, Box } from 'theme-ui'
 
+import ContentsList from "./contents-list"
+
 
 export interface TableOfContents {
   url: string
@@ -36,15 +38,16 @@ const ContentsPanel: FC<ContentsPanel> = ({ tableOfContents, location }) => {
     <aside sx={asideStyle}>
       <Box as="nav" sx={navStyle}>
         <Text as="p" sx={titleStyle}>Contents</Text>
-        <Box as="ul" sx={listStyle}>
-          {listItems.map(item => (
-            <Text as="li" key={location.pathname + item.url} sx={listItemStyle}>
-              <Link to={location.pathname + item.url} sx={linkStyle}>
-                {item.title}
-              </Link>
-            </Text>
-          ))}
-        </Box>
+        <ContentsList contentsList={tableOfContents.items} />
+        {/* <Box as="ul" sx={listStyle}> */}
+        {/*   {listItems.map(item => ( */}
+        {/*     <Text as="li" key={location.pathname + item.url} sx={listItemStyle}> */}
+        {/*       <Link to={location.pathname + item.url} sx={linkStyle}> */}
+        {/*         {item.title} */}
+        {/*       </Link> */}
+        {/*     </Text> */}
+        {/*   ))} */}
+        {/* </Box> */}
       </Box>
     </aside>
   );
@@ -70,6 +73,7 @@ const navStyle = {
 
 const titleStyle = {
   mt: 0,
+  mx: '1.0rem',
   fontSize: '0.9rem',
   fontWeight: 700,
   textTransform: 'uppercase'
