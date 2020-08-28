@@ -9,13 +9,6 @@ module.exports = {
   },
   pathPrefix: `/`,
   plugins: [
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-theme-ui`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-typescript`,
-    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-source-filesystem`,
       options: { path: `./src/data/` },
@@ -63,5 +56,12 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    `gatsby-transformer-yaml`,
+    `gatsby-plugin-theme-ui`,
   ],
 }
