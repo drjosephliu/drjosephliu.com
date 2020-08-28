@@ -8,7 +8,7 @@ const base = {
   title: `Joseph Liu`,
   url: `https://drjosephliu.com`,
   description: `Doctor turned computer science student at the University of Pennsylvania with a curious mind and a love for learning and building`,
-  image: `https://chrisnager.com/chris-nager-card.png`,
+  image: `https://drjosephliu.com/joseph-liu-card.png`,
   author: `@thejoligarch`,
   hasCodePenEmbed: false,
 }
