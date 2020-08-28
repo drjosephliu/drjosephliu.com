@@ -9,14 +9,14 @@ export interface TableOfContents {
 }
 
 export interface ContentsList {
-  tableOfContents: TableOfContents
+  contentsList: TableOfContents[]
   location: any
 }
 
-const ContentsList: FC<ContentsList> = ({ tableOfContents, location }) => {
+const ContentsList: FC<ContentsList> = ({ contentsList, location }) => {
   return (
     <Box as="ul" sx={listStyle}>
-      {tableOfContents.map(item => (
+      {contentsList.map(item => (
         <Text as="li" key={location.pathname + item.url} sx={listItemStyle}>
           <Link to={location.pathname + item.url} sx={linkStyle}>
             {item.title}
