@@ -38,16 +38,7 @@ const ContentsPanel: FC<ContentsPanel> = ({ tableOfContents, location }) => {
     <aside sx={asideStyle}>
       <Box as="nav" sx={navStyle}>
         <Text as="p" sx={titleStyle}>Contents</Text>
-        <ContentsList contentsList={tableOfContents.items} />
-        {/* <Box as="ul" sx={listStyle}> */}
-        {/*   {listItems.map(item => ( */}
-        {/*     <Text as="li" key={location.pathname + item.url} sx={listItemStyle}> */}
-        {/*       <Link to={location.pathname + item.url} sx={linkStyle}> */}
-        {/*         {item.title} */}
-        {/*       </Link> */}
-        {/*     </Text> */}
-        {/*   ))} */}
-        {/* </Box> */}
+        <ContentsList contentsList={tableOfContents.items} location={location} />
       </Box>
     </aside>
   );

@@ -2,18 +2,27 @@ import React from "react"
 import { Link } from 'gatsby'
 import { jsx, Text, Box } from 'theme-ui'
 
-const ContentsList: FC<ContentsList> = ({ contentsList }) => {
+export interface TableOfContents {
+  url: string
+  title: string
+  items: TableOfContents[]
+}
+
+export interface ContentsList {
+  tableOfContents: TableOfContents
+  location: any
+}
+
+const ContentsList: FC<ContentsList> = ({ tableOfContents, location }) => {
   return (
     <Box as="ul" sx={listStyle}>
-      {contentsList.map(item => (
-        <>
+      {tableOfContents.map(item => (
         <Text as="li" key={location.pathname + item.url} sx={listItemStyle}>
           <Link to={location.pathname + item.url} sx={linkStyle}>
             {item.title}
           </Link>
-          {item.items && <ContentsList contentsList={item.items} />}
+          {item.items && <ContentsList contentsList={item.items} location={location} />}
         </Text>
-        </>
       ))}
     </Box>
   )
