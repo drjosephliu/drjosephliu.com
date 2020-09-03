@@ -7,6 +7,7 @@
     "url": "https://github.com/drjosephliu/drjosephliu.com/issues"
   },
   "dependencies": {
+    "@babel/core": "^7.11.5",
     "@theme-ui/prism": "^0.3.0",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-manifest": "^2.4.23",
@@ -21,6 +22,7 @@
     "typeface-merriweather": "^0.0.72",
     "typeface-montserrat": "^0.0.75",
     "typeface-raleway": "^0.0.75",
+    "typescript": "^4.0.2",
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
